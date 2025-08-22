@@ -100,8 +100,16 @@ print(f"Frase sem espaços: {texto.strip()}")
 """
 #14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
 """
-data = input("Digite a data no formato ""dd/mm/aaaa: ")
-dia,mes,ano = data.split('/')
+
+#data = input("Digite a data no formato ""dd/mm/aaaa: ")
+#dia,mes,ano = data.split('/')
+
+##outra forma conforme aula, com criaçao de variavel
+data = "21/08/2025"
+data.split("/")
+dia = data.split("/")[0]
+mes = data.split("/")[1]
+ano = data.split("/")[2]
 
 print(f"Dia {dia}, Mes {mes}, Ano {ano}")
 """
@@ -126,14 +134,32 @@ res = bl1 and bl2
 print(f"resultado do AND: {res}")
 """
 #17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
-
+"""
 bl1 = True
 bl2 = False
 res = bl1 or bl2
 
 print(f"resultado do OR: {res}")
-
-
+"""
 #18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+"""
+bl = False
+inverso = not bl
+
+print(f"Resultado do NOT: {inverso}")
+"""
 #19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+"""
+num1 = float(input("Digite um valor: "))
+num2 = float(input("Digite outro valor: "))
+comp = num1 == num2
+
+print(f"Os numeros sao iguais? {comp}")
+"""
 #20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
+
+num1 = float(input("Digite um valor: "))
+num2 = float(input("Digite outro valor: "))
+comp = num1 != num2
+
+print(f"Os numeros sao diferentes? {comp}")
