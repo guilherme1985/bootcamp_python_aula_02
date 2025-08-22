@@ -35,6 +35,11 @@ finally:
 # else:
 #     print("A variável não é um inteiro.")
 
+
+#####
+# IF
+#####
+"""
 idade = 17
 
 IDADE_MINIMA = 16
@@ -49,3 +54,4 @@ if idade <= IDADE_MIN_CARTEIRA:
     print("Não pode tirar a carteira")
 else:
     print("Pode tirar a carteira")
+"""
