@@ -1,7 +1,9 @@
-import math
+
 
 # Exercício 21: Conversor de Temperatura
 # Escreva um programa que converta a temperatura de Celsius para Fahrenheit. O programa deve solicitar ao usuário a temperatura em Celsius e, utilizando try-except, garantir que a entrada seja numérica, tratando qualquer ValueError. Imprima o resultado em Fahrenheit ou uma mensagem de erro se a entrada não for válida.
+"""
+import math
 
 try:
     c = float(input("Digite a temperatura em Celsius: "))
@@ -35,23 +37,38 @@ if math.isinf(f) == False:
 else:
     print("\nO calculo de temperatura retornou valor infinito.")
 
-
-
-
-
-"""
-    try: 
-
-    except MemoryError as me:
-        print("\nErro de memória.")
-        print(me)
-    except OverflowError as oe:
-        print("\nErro de estouro.")
-        print(oe)
 """
 
 # Exercício 22: Verificador de Palíndromo
 # Crie um programa que verifica se uma palavra ou frase é um palíndromo (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações). Utilize try-except para garantir que a entrada seja uma string. Dica: Utilize a função isinstance() para verificar o tipo da entrada.
+
+## referencia: https://docs.python.org/3/library/stdtypes.html
+# txt1 = "texto"
+# txt2 = "texto2"
+# txt3 = "1234"
+
+# print("alnum", txt1.isalnum()) # True
+# print("alnum", txt2.isalnum()) # True
+# print("alnum", txt3.isalnum()) # True
+
+# print("alpha", txt1.isalpha()) # True
+# print("alpha", isalpha()) # False
+# print("alpha", txt3.isalpha()) # False
+
+# print("numeric", txt1.isnumeric()) # False
+# print("numeric", txt2.isnumeric()) # False
+# print("numeric", txt3.isnumeric()) # True
+
+texto = str(input("Digite um palindromo: "))
+if texto.isalpha() == False:
+    raise TypeError("A entrada deve conter somente letras.")
+else:
+    palin = texto.strip()[::-1]
+    if texto == palin:
+        print(f"{texto} é um palindromo")
+    else:
+        print(f"{texto} não é um palindromo") 
+
 
 # Exercício 23: Calculadora Simples
 # Desenvolva uma calculadora simples que aceite duas entradas numéricas e um operador (+, -, *, /) do usuário. Use try-except para lidar com divisões por zero e entradas não numéricas. Utilize if-elif-else para realizar a operação matemática baseada no operador fornecido. Imprima o resultado ou uma mensagem de erro apropriada.
