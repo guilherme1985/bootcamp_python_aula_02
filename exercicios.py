@@ -1,3 +1,5 @@
+import math
+
 ###Exercícios
 ##Inteiros (int)
 #1. Escreva um programa que soma dois números inteiros inseridos pelo usuário.
@@ -27,7 +29,7 @@ num1 = int(input("Digite um valor inteiro: "))
 num2 = int(input("Digite outro valor inteiro: "))
 
 print(f"A sua divisao sem resto é {num1 // num2}")
-print(f"A sua divisao é {num1 / num2}")
+
 """
 #5. Escreva um programa que calcule o quadrado de um número fornecido pelo usuário.
 """
@@ -72,7 +74,11 @@ print(f"A temperatura em Fahrenheit é {f}°")
 raio = float(input("Digite o raio do circulo: "))
 area = 3.14 * (raio ** 2)
 
+# melhorando de acordo com o video da aula
+area2 = math.pi * (math.pow(raio, 2))
+
 print(f"A área do circulo é {area}")
+print(f"A área do circulo de outra forma {area2:.2f}")
 """
 ##Strings (str)
 #11. Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
