@@ -80,8 +80,7 @@ else:
 #     print(a, end=',')
 #     a, b = b, a + b
 
-
-
+"""
 while True:
     num1 = None
     num2 = None
@@ -123,13 +122,38 @@ while True:
                 print("Divisao por zero!")
                 print(zde)
     break
-        
-
-
-
-
+"""
+    
 # Exercício 24: Classificador de Números
 # Escreva um programa que solicite ao usuário para digitar um número. Utilize try-except para assegurar que a entrada seja numérica e utilize if-elif-else para classificar o número como "positivo", "negativo" ou "zero". Adicionalmente, identifique se o número é "par" ou "ímpar".
+
+# i = 3 % 2
+# p = 6 % 2
+# print(f"par: {p} / impar: {i}")
+
+
+while True:
+    try:
+          num = float(input("Digite um numero: "))
+    except ValueError as ve:
+         print("Digite apenas numeros. Ex. 25.5 ou -25.5")
+         print(ve)
+         continue
+    if num > 0:
+        sinal = "positivo"
+    elif num < 0:
+        sinal = "negativo"
+    else:
+        sinal = "zero"
+
+    resto = num % 2
+    if resto == 0 and num != 0:
+        print(f"O valor {num} é {sinal} e é par")
+    elif resto != 0:
+        print(f"O valor {num} é {sinal} e é impar")
+    else:
+        print(f"O valor {num} não tem sinal e é par")
+    break
 
 # Exercício 25: Conversão de Tipo com Validação
 # Crie um script que solicite ao usuário uma lista de números separados por vírgula. O programa deve converter a string de entrada em uma lista de números inteiros. Utilize try-except para tratar a conversão de cada número e validar que cada elemento da lista convertida é um inteiro. Se a conversão falhar ou um elemento não for um inteiro, imprima uma mensagem de erro. Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.
