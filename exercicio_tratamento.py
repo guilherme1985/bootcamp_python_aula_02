@@ -58,7 +58,7 @@ else:
 # print("numeric", txt1.isnumeric()) # False
 # print("numeric", txt2.isnumeric()) # False
 # print("numeric", txt3.isnumeric()) # True
-
+"""
 texto = str(input("Digite um palindromo: "))
 if texto.isalpha() == False:
     raise TypeError("A entrada deve conter somente letras.")
@@ -68,10 +68,65 @@ else:
         print(f"{texto} é um palindromo")
     else:
         print(f"{texto} não é um palindromo") 
-
+"""
 
 # Exercício 23: Calculadora Simples
 # Desenvolva uma calculadora simples que aceite duas entradas numéricas e um operador (+, -, *, /) do usuário. Use try-except para lidar com divisões por zero e entradas não numéricas. Utilize if-elif-else para realizar a operação matemática baseada no operador fornecido. Imprima o resultado ou uma mensagem de erro apropriada.
+
+# referencia: https://docs.python.org/pt-br/3.13/tutorial/introduction.html
+
+# a, b = 0, 1
+# while a < 10:
+#     print(a, end=',')
+#     a, b = b, a + b
+
+
+
+while True:
+    num1 = None
+    num2 = None
+    op = None
+
+    while True: 
+        n = input("digite um numero: ")
+        try:
+            num1 = float(n)
+            break
+        except ValueError as ve:
+            print("Digite apenas numeros. Ex 25.5")
+    
+    while True: 
+        n = input("digite outro numero: ")
+        try:
+            num2 = float(n)
+            break
+        except ValueError as ve:
+            print("Digite apenas numeros. Ex 25.5")
+    
+    while True: 
+        op = input("digite o operador (+, -, / ou *): ")
+        if op in['+', '-', '*', '/']:
+            break
+        else:
+            print("digite um operador valido! (+, -, / ou *)")
+    
+    if op == '+':
+        print(f"Resultado: {num1 + num2}")
+    elif op == '-':
+        print(f"Resultado: {num1 - num2}")
+    elif op == '*':
+        print(f"Resultado: {num1 * num2}")
+    elif op == '/':
+        try: 
+                print(f"Resultado: {num1 / num2}")
+        except ZeroDivisionError as zde:
+                print("Divisao por zero!")
+                print(zde)
+    break
+        
+
+
+
 
 # Exercício 24: Classificador de Números
 # Escreva um programa que solicite ao usuário para digitar um número. Utilize try-except para assegurar que a entrada seja numérica e utilize if-elif-else para classificar o número como "positivo", "negativo" ou "zero". Adicionalmente, identifique se o número é "par" ou "ímpar".
