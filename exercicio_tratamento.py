@@ -58,8 +58,8 @@ else:
 # print("numeric", txt1.isnumeric()) # False
 # print("numeric", txt2.isnumeric()) # False
 # print("numeric", txt3.isnumeric()) # True
-"""
-texto = str(input("Digite um palindromo: "))
+
+texto = input("Digite um palindromo: ")
 if texto.isalpha() == False:
     raise TypeError("A entrada deve conter somente letras.")
 else:
@@ -68,7 +68,7 @@ else:
         print(f"{texto} é um palindromo")
     else:
         print(f"{texto} não é um palindromo") 
-"""
+
 
 # Exercício 23: Calculadora Simples
 # Desenvolva uma calculadora simples que aceite duas entradas numéricas e um operador (+, -, *, /) do usuário. Use try-except para lidar com divisões por zero e entradas não numéricas. Utilize if-elif-else para realizar a operação matemática baseada no operador fornecido. Imprima o resultado ou uma mensagem de erro apropriada.
