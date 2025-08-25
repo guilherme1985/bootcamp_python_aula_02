@@ -131,7 +131,7 @@ while True:
 # p = 6 % 2
 # print(f"par: {p} / impar: {i}")
 
-
+"""
 while True:
     try:
           num = float(input("Digite um numero: "))
@@ -154,6 +154,20 @@ while True:
     else:
         print(f"O valor {num} não tem sinal e é par")
     break
+"""
 
 # Exercício 25: Conversão de Tipo com Validação
 # Crie um script que solicite ao usuário uma lista de números separados por vírgula. O programa deve converter a string de entrada em uma lista de números inteiros. Utilize try-except para tratar a conversão de cada número e validar que cada elemento da lista convertida é um inteiro. Se a conversão falhar ou um elemento não for um inteiro, imprima uma mensagem de erro. Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.
+
+entrada = input("Digite uma lista de numeros separados por virgula: ")
+lista = entrada.split(",")
+num_lista = []
+
+try:
+    for n in lista:
+        num_lista.append(int(n.strip()))
+    print(num_lista)
+except ValueError:
+    print(f"O valor <{n.strip()}>, não é um inteiro")
+
+
