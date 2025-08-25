@@ -11,6 +11,7 @@ try:
         nm_user = input("\nDigite seu nome: ")
 except KeyboardInterrupt:
     print("Interrompido pelo usuario.")
+    exit()
 
 while True:
     try:
@@ -23,6 +24,7 @@ while True:
         print("Digite somente numeros! Em caso de decimais use '.'")
     except KeyboardInterrupt:
         print("Interrompido pelo usuario.")
+        exit()
 
 while True:
     try:
@@ -35,6 +37,7 @@ while True:
         print("Digite somente numeros! Em caso de decimais use '.'")
     except KeyboardInterrupt:
         print("Interrompido pelo usuario.")
+        exit()
 
 ##### CALCULO
 if bonus == 0:
